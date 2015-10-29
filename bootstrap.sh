@@ -23,5 +23,3 @@ for f in $symlinks; do
 
     ln -s $f "$HOME/$copy_to"
 done
-
-$dotfiles/install.sh
