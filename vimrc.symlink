@@ -1,0 +1,56 @@
+" It's 2015
+set nocompatible
+
+" Sensible Defaults
+syntax on
+filetype plugin indent on
+
+" Pathogen -- A TPope Production
+execute pathogen#infect()
+
+" UI
+set laststatus=2
+set showtabline=2
+set showcmd
+set cursorline
+set listchars=tab:▸\ ,eol:¬,trail:⋅,extends:❯,precedes:❮
+set list
+set number
+set relativenumber
+colorscheme molokai
+
+" Leader is <space>
+let mapleader = "\<space>"
+
+" To toggle insert/normal mode its Ctrl-Space
+nnoremap <nul> i
+inoremap <nul> <esc>
+
+" Quickly edit ~/.vimrc
+nnoremap <leader>ev :split $MYVIMRC<cr>
+nnoremap <leader>sv :source $MYVIMRC<cr>
+
+" Quickly edit ~/.tmux.conf
+nnoremap <leader>et :split $MYTMUXCONF<cr>
+
+" Switch between windows
+nnoremap <c-h> <c-w>h
+nnoremap <c-j> <c-w>j
+nnoremap <c-k> <c-w>k
+nnoremap <c-l> <c-w>l
+
+" Create windows
+nnoremap <leader>- :split<cr>
+nnoremap <leader>\| :vsplit<cr>
+
+" Never type colon again
+nnoremap <leader><cr> :
+
+" Toggle showing whitespace characters
+nnoremap <leader>l :set list!<cr>
+
+" NERD Tree
+nnoremap <leader>n :NERDTreeToggle<cr>
+
+" Tabs are 4 spaces, always
+set tabstop=4 softtabstop=4 shiftwidth=4 expandtab

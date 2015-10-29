@@ -1,0 +1,9 @@
+[submodule "vim.symlink/bundle/molokai"]
+	path = vim.symlink/bundle/molokai
+	url = https://github.com/tomasr/molokai
+[submodule "vim.symlink/bundle/nerdtree"]
+	path = vim.symlink/bundle/nerdtree
+	url = https://github.com/scrooloose/nerdtree
+[submodule "vim.symlink/vim-pathogen"]
+	path = vim.symlink/vim-pathogen
+	url = https://github.com/tpope/vim-pathogen.git
