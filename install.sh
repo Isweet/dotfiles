@@ -2,8 +2,12 @@
 
 dotfiles=$(cd $(dirname $0) && pwd)
 
+cd $dotfiles
+
 git submodule init
 git submodule update
+
+cd -
 
 $dotfiles/bootstrap.sh
 
