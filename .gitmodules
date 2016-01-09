@@ -13,3 +13,12 @@
 [submodule "vim.symlink/bundle/vim-airline"]
 	path = vim.symlink/bundle/vim-airline
 	url = git@github.com:bling/vim-airline.git
+[submodule "vim.symlink/bundle/nerdcommenter"]
+	path = vim.symlink/bundle/nerdcommenter
+	url = git@github.com:scrooloose/nerdcommenter.git
+[submodule "vim.symlink/bundle/vim-surround"]
+	path = vim.symlink/bundle/vim-surround
+	url = git://github.com/tpope/vim-surround
+[submodule "vim.symlink/bundle/vim-repeat"]
+	path = vim.symlink/bundle/vim-repeat
+	url = git@github.com:tpope/vim-repeat.git
