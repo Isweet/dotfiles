@@ -22,3 +22,6 @@
 [submodule "vim.symlink/bundle/vim-repeat"]
 	path = vim.symlink/bundle/vim-repeat
 	url = git@github.com:tpope/vim-repeat.git
+[submodule "vim.symlink/bundle/tabular"]
+	path = vim.symlink/bundle/tabular
+	url = git://github.com/godlygeek/tabular.git
