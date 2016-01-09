@@ -68,3 +68,9 @@ let g:syntastic_check_on_wq = 0
     " Haskell
     let g:syntastic_haskell_checkers=["hlint"]
     let g:syntastic_haskell_hlint_args="-i 'Redundant bracket'"
+
+" Airline
+let g:airline_powerline_fonts=1
+let g:airline_left_sep=''
+let g:airline_right_sep=''
+let g:airline_theme='molokai'
