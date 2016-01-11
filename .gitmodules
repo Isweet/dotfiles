@@ -31,3 +31,6 @@
 [submodule "vim.symlink/bundle/vimux"]
 	path = vim.symlink/bundle/vimux
 	url = git://github.com/benmills/vimux.git
+[submodule "vim.symlink/bundle/vim-hindent"]
+	path = vim.symlink/bundle/vim-hindent
+	url = git@github.com:octol/vim-hindent.git
