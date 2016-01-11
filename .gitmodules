@@ -25,3 +25,9 @@
 [submodule "vim.symlink/bundle/tabular"]
 	path = vim.symlink/bundle/tabular
 	url = git://github.com/godlygeek/tabular.git
+[submodule "vim.symlink/bundle/vim-fugitive"]
+	path = vim.symlink/bundle/vim-fugitive
+	url = git://github.com/tpope/vim-fugitive.git
+[submodule "vim.symlink/bundle/vimux"]
+	path = vim.symlink/bundle/vimux
+	url = git://github.com/benmills/vimux.git
