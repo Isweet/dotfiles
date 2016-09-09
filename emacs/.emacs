@@ -41,7 +41,7 @@
 
 (load-file "/usr/local/Cellar/proof-general/4.2/share/emacs/site-lisp/proof-general/generic/proof-site.el")
 (add-hook 'proof-ready-for-assistant-hook (lambda () (show-paren-mode 0)))
-(global-set-key (kbd "C-c C-h") 'proof-goto-point)
+(add-hook 'coq-mode-hook (lambda () (local-set-key (kbd "C-c RET") 'proof-goto-point)))
 
 ;; Install
 (unless package-archive-contents
