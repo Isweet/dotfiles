@@ -15,7 +15,9 @@ declare -a casks=("google-chrome"
 declare -a brews=("git"
 		  "stow")
 
-declare -a configs=("bash" "emacs")
+declare -a configs=("bash"
+                    "git"
+                    "emacs")
 
 # Get Homebrew if it doesn't exist
 if ! hash "brew" &> /dev/null ; then

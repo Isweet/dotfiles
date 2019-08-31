@@ -1,0 +1,5 @@
+[user]
+        name = Ian Sweet
+        email = iannsweet@gmail.com
+[core]
+	editor = emacs
