@@ -19,11 +19,15 @@ declare -a configs=("bash"
                     "git"
                     "emacs")
 
+declare -a fonts=("source-code-pro")
+
 # Get Homebrew if it doesn't exist
 if ! hash "brew" &> /dev/null ; then
     echo "'brew' not found. Installing..."
     /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
+
+brew tap homebrew/cask-fonts
 
 # Install all Homebrew Cask dependencies
 for dep in "${casks[@]}"; do
@@ -38,6 +42,14 @@ for dep in "${brews[@]}"; do
     if ! brew list "$dep" &> /dev/null ; then
 	echo "'$dep' not found. Installing..."
 	brew install "$dep"
+    fi
+done
+
+# Install all fonts
+for font in "${fonts[@]}"; do
+    if ! brew cask list font-"$font" &> /dev/null ; then
+        echo "'$font' not found. Installing..."
+        brew cask install font-"$font"
     fi
 done
 
