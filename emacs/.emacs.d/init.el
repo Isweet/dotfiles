@@ -1,4 +1,5 @@
-;; Ian's Emacs Config
+ ;; Ian's Emacs Config
+(setq inhibit-startup-screen t)
 
 ;;; Package Setup
 (require 'package)
@@ -54,7 +55,6 @@
 (global-hl-line-mode 1)
 (set-face-background 'hl-line "#262626")
 (set-face-foreground 'highlight nil)
-
 
 (setq make-backup-files nil)
 (setq auto-save-default nil)
