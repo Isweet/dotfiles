@@ -7,6 +7,7 @@
 # Dependencies that are in Homebrew Casks
 declare -a casks=("google-chrome"
 		  "iterm2"
+                  "spotify"
                   "emacs"
 		  "virtualbox"
 		  "vagrant")
