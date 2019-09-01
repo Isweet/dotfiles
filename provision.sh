@@ -23,6 +23,12 @@ declare -a configs=("bash"
 
 declare -a fonts=("source-code-pro")
 
+declare -a gos=("github.com/nsf/gocode"
+                "github.com/rogpeppe/godef"
+                "golang.org/x/tools/cmd/goimports")
+
+
+
 # Get Homebrew if it doesn't exist
 if ! hash "brew" &> /dev/null ; then
     echo "'brew' not found. Installing..."
@@ -62,5 +68,7 @@ for conf in "${configs[@]}"; do
 done
 
 # Go
-go get github.com/nsf/gocode
-go get github.com/rogpeppe/godef
+for go in "${gos[@]}"; do
+    # TODO: how do we check if they are already installed?
+    go get "$go"
+done

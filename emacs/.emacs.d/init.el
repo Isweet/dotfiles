@@ -53,6 +53,7 @@
 			  (set (make-local-variable 'company-backends) '(company-go))
                           (flycheck-mode)
 			  (company-mode)))
+(setq gofmt-command "goimports")
 (add-hook 'before-save-hook 'gofmt-before-save)
 
 
