@@ -32,6 +32,30 @@
 (use-package monokai-theme
   :ensure t)
 
+(use-package company
+  :ensure t)
+(eval-after-load 'company
+  '(progn
+     (define-key company-active-map (kbd "TAB") 'company-complete-common-or-cycle)
+     (define-key company-active-map [tab] 'company-complete-common-or-cycle)))
+(setq company-idle-delay 0)
+
+
+(use-package flycheck
+  :ensure t)
+
+;;;; Go
+(use-package go-mode
+  :ensure t)
+(use-package company-go
+  :ensure t)
+(add-hook 'go-mode-hook (lambda ()
+			  (set (make-local-variable 'company-backends) '(company-go))
+                          (flycheck-mode)
+			  (company-mode)))
+(add-hook 'before-save-hook 'gofmt-before-save)
+
+
 (dolist (package package-list)
   (unless (package-installed-p package)
     (package-install package)))
@@ -67,3 +91,15 @@
 
 (setq column-number-mode t)
 (show-paren-mode 1)
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages (quote (go-mode use-package monokai-theme))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )

@@ -14,6 +14,7 @@ declare -a casks=("google-chrome"
 
 # Dependencies that are in Homebrew
 declare -a brews=("git"
+                  "go"
 		  "stow")
 
 declare -a configs=("bash"
@@ -59,3 +60,7 @@ for conf in "${configs[@]}"; do
     # TODO: how do we check if they are already symlinked?
     stow --target="$HOME" "$conf"
 done
+
+# Go
+go get github.com/nsf/gocode
+go get github.com/rogpeppe/godef

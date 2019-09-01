@@ -4,7 +4,10 @@ export PS1="\[$(tput bold)\]\[$(tput setaf 1)\][\[$(tput setaf 3)\]\u\[$(tput se
 # LS colors
 export LSCOLORS="exfxcxdxbxegedabagacad"
 
-# PATH
+# Go
+export GOPATH="$HOME/Projects/go"
+export GOROOT="$(brew --prefix golang)/libexec"
+export PATH="$GOPATH/bin:$GOROOT/bin:$PATH"
 
 # opam configuration
 test -r /Users/ins/.opam/opam-init/init.sh && . /Users/ins/.opam/opam-init/init.sh > /dev/null 2> /dev/null || true
